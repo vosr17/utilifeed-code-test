@@ -45,7 +45,7 @@ for j in range (si):
 final = [timefinal,final_flow, final_temp]
 
 export_data = zip_longest(*final, fillvalue = '')
-with open('stream_aggregate.csv', 'w', encoding="ISO-8859-1", newline='') as myfile:
+with open('output/stream_aggregate.csv', 'w', encoding="ISO-8859-1", newline='') as myfile:
       wr = csv.writer(myfile)
       wr.writerow(("datetime", "flow", "temperature"))
       wr.writerows(export_data)
